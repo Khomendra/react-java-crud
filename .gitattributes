@@ -1,0 +1,21 @@
+# Store text files with LF in the repo, let Git pick the right ending on checkout.
+* text=auto eol=lf
+
+# Windows-only scripts need CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Shell scripts must stay LF or they break in Linux/Docker
+*.sh   text eol=lf
+mvnw   text eol=lf
+
+# Binary files: never touch
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.jar  binary
+*.docx binary
+*.pdf  binary

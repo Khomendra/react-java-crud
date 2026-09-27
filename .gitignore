@@ -1,0 +1,41 @@
+# ─── Secrets and local config (NEVER commit) ───
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ─── Java / Maven (backend) ───
+backend/target/
+*.class
+*.log
+hs_err_pid*
+!backend/.mvn/wrapper/maven-wrapper.jar
+
+# ─── Node / Vite (frontend) ───
+node_modules/
+frontend/dist/
+frontend/coverage/
+*.tsbuildinfo
+npm-debug.log*
+
+# ─── Runtime data (uploaded images, local DB dumps) ───
+data/
+backend/data/
+*.dump
+*.sql.gz
+
+# ─── Postman: local environments may contain real passwords ───
+postman/*.local.postman_environment.json
+
+# ─── IDEs ───
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# ─── OS junk ───
+.DS_Store
+Thumbs.db
+desktop.ini
